@@ -14,9 +14,10 @@
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$weight = $_POST['weight'];
 			$height = $_POST['height'];
-			//Calculate bmi\\
+			//Calculate bmi
 			$bmi = $weight / ($height * $height);
 			$label = '';
+			//Calculate weight
 			if ($bmi < 18.5) {
 				$label = 'Underweight';
 			} elseif ($bmi >= 18.5 && $bmi <= 24.9) {

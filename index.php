@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>bmi</title>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="style.css"/>
 
     </head>
     <body>
@@ -14,6 +14,7 @@
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$weight = $_POST['weight'];
 			$height = $_POST['height'];
+			//Calculate bmi\\
 			$bmi = $weight / ($height * $height);
 			$label = '';
 			if ($bmi < 18.5) {

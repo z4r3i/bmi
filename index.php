@@ -14,6 +14,7 @@
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$weight = $_POST['weight'];
 			$height = $_POST['height'];
+			$height = $height /100;
 			//Calculate bmi
 			$bmi = $weight / ($height * $height);
 			$label = '';
@@ -32,7 +33,7 @@
 	?>
         <form action="" method="post">
             <input type="text" name="weight" placeholder="your weight (kg)"/><br>
-            <input type="text" name="height" placeholder="your height (m)"/><br>
+            <input type="text" name="height" placeholder="your height (cm)"/><br>
             <center><input type="submit"></center>
         </form><br>
         <h3 style="color: aliceblue;">created by <a href="https://github.com/z4r3i" style="color: darkgoldenrod;">z4r3i</a></h3>
